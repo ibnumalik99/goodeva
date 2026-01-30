@@ -9,5 +9,5 @@ export const AppDataSource = new DataSource({
   password: 'Password123',
   database: 'goodeva',
   entities: [Todo],
-  migrations: ['src/migrations/*.ts'],
+  migrations: ['dist/migration/*.ts'],
 });
