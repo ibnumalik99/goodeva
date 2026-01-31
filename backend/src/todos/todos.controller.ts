@@ -16,21 +16,19 @@ export class TodosController {
 
   @Post()
   async create(@Body() dto: CreateTodoDto) {
-    const data = await this.service.create(dto);
+    await this.service.create(dto);
     return {
       statusCode: HttpStatus.CREATED,
       message: "Todo successfully saved",
-      data: data
     }
   }
 
   @Patch(':id')
   async update(@Param('id', ParseIntPipe) id: number, @Body() dto: UpdateTodoDto) {
-    const data = await this.service.update(id, dto);
+    await this.service.update(id, dto);
     return {
       statusCode: HttpStatus.OK,
       message: `Todo successfully updated`,
-      data: data
     }
   }
 
