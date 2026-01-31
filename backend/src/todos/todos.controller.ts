@@ -2,6 +2,7 @@ import { Controller, Get, Post, Patch, Param, Body, Query, HttpStatus } from '@n
 import { TodosService } from './todos.service';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
+import { ParseIntPipe } from '@nestjs/common';
 
 @Controller('api/todos')
 export class TodosController {
@@ -24,10 +25,10 @@ export class TodosController {
   }
 
   @Patch(':id')
-  async update(@Param('id') id: number, @Body() dto: UpdateTodoDto) {
+  async update(@Param('id', ParseIntPipe) id: number, @Body() dto: UpdateTodoDto) {
     const data = await this.service.update(id, dto);
     return {
-      statuCode: HttpStatus.OK,
+      statusCode: HttpStatus.OK,
       message: `Todo successfully updated`,
       data: data
     }
